@@ -1,3 +1,4 @@
+
 # GROUP 8
 
 ## What models did we use?
@@ -22,3 +23,4 @@ Qwen also gave much longer answers and tried to include "facts" (which were ofte
 For such simple questions, it seemed that the answers were generated at approximately the same speed as those from more commercial models.
 Both models seemed to perform worse than models like ChatGPT, Claude, and Gemini. These models recognized Småland as a region in Sweden rather than its own country and understood that Småland does not have a formal capital. They also provided more alternatives for informal capitals, beyond Gothenburg, which was by far the most common answer given by Llama and Qwen.
 However, it is also difficult to draw any firm conclusions based on only two questions.
+
