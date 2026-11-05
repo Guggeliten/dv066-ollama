@@ -1,56 +1,24 @@
-# Usage guide
+# GROUP 8
 
-This repository provides examples for using **Ollama** and **OpenAI** with Python.
+## What models did we use?
 
-## 📂 Examples
+For this assignment, we used Llama 3.2 and Qwen 2.5:0.5b.
+We chose these two for convenience.
 
-* `1_basic.py` → Basic Ollama example (text only)
-* `2_images.py` → Image interpretation with Ollama
-* `3_safecall.py` → Image interpretation with Ollama (fail safe mode)
-* `4_loopthroughimages.py` → Images interpretation with Ollama (looping through images in a folder)
-* `5_openai.py` → Image interpretation with OpenAI (fail safe mode)
-* `6_elapsedtime.py` → Elapsed time when calling a model (test before running a lot of tests to estimate time)
-* `8_save_csv.py` and `9_composite_prompt.py` might be useful to you if you want to run complex prompts and save the results of all combinations in a spreadsheet!
+## How to run our code
 
----
+To run our code, we created a new folder called **Group 8**. Inside this folder, you will find two more files. The file `assignment1.py` contains the code for this assignment. If you press Run from that window, the code should execute.
+The answers we got are saved in the other file, `assignment1 answers`.
+The `TESTS` folder contains nothing related to the assignment. It only contains some fun stuff we wanted to try.
 
-## 🚀 OLLAMA
+## What we observed
 
-1. Download Ollama from [ollama.com](https://ollama.com).
-2. **Recommended**: activate plane mode in Ollama if you are working with sensitive information.
-3. Open a terminal and run:
-   ```bash
-   ollama pull XXXX
-
-* `XXXX` is the model and version you want from [ollama.com/library](https://ollama.com/library).
-* **Recommended**: run
-  ```bash
-  ollama list
-  ```
-  and store the ID of the model you downloaded (you might need to report this, later on).
-
-4. Install the Python library:
-   ```bash
-   pip install ollama
-   ```
-5. Try running the examples:
-   ```bash
-   python 1_basic.py
-   ```
-
----
-
-## 🔑 OPENAI
-
-1. Get an OpenAI API key from [platform.openai.com/api-keys](https://platform.openai.com/api-keys).
-2. Install the Python packages:
-
-   ```bash
-   pip install openai
-   pip install pillow
-   ```
-3. Run an example:
-   ```bash
-   python 5_openai.py
-   ```
-* The example relies on a file `oepnai_key.txt` that you can create on your own. Do not share that file with anyone 💀.
+When we started asking questions about Stockholm, both models gave more accurate answers and did not produce any hallucinated answers.
+However, when we asked more difficult questions containing errors in the questions themselves, such as "What is the capital of Småland?", we noticed some clear differences!
+Qwen started hallucinating a lot and producing answers that made very little sense. It also referred to Småland as its own country or province. It often declared Gothenburg to be its capital. It also invented or confused geographical information.
+Llama was more accurate in its answers and could even tell us that Småland does not have a capital since it is a region. However, it also produced several hallucinated answers about the largest city and its location.
+We could also see that Qwen seemed to be more "confident" in its answers, whereas Llama seemed a little more uncertain.
+Qwen also gave much longer answers and tried to include "facts" (which were often incorrect).
+For such simple questions, it seemed that the answers were generated at approximately the same speed as those from more commercial models.
+Both models seemed to perform worse than models like ChatGPT, Claude, and Gemini. These models recognized Småland as a region in Sweden rather than its own country and understood that Småland does not have a formal capital. They also provided more alternatives for informal capitals, beyond Gothenburg, which was by far the most common answer given by Llama and Qwen.
+However, it is also difficult to draw any firm conclusions based on only two questions.
