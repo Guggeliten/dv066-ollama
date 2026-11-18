@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import unittest
 import sys
 from pathlib import Path
@@ -30,7 +29,6 @@ class testmethods(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-=======
 import ollama
 
 
@@ -87,4 +85,3 @@ for run in range(1, RUNS + 1):
             )
             second_responsejudge = ollama.chat(model=modelGemma, messages=[{"role": "user", "content": second_judge_prompt}])
             print(f"Run {run}: Model {modelGemma} evaluation: {second_responsejudge['message']['content']}")
->>>>>>> 1cf34db0b42fad57db2776b54a7965495bfc5038
